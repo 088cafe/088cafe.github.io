@@ -1,1 +1,28 @@
-window.location.href = 'http://www.facebook.com';
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+
+        var queryString = window.location.search;
+
+
+        var urlParams = new URLSearchParams(queryString);
+
+
+        var target = urlParams.get('target');
+
+
+        if (target === 'facebook') {
+            window.location.href = 'http://www.facebook.com';
+        } else if (target === 'google') {
+            window.location.href = 'http://www.google.com';
+        } else {
+ 
+            window.location.href = 'http://www.facebook.com';
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
