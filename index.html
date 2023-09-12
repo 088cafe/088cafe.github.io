@@ -1,1 +1,17 @@
-HELLO111
+var queryString = window.location.search;
+
+// 使用 URLSearchParams 來解析 query string
+var urlParams = new URLSearchParams(queryString);
+
+// 獲取 'target' 參數的值
+var target = urlParams.get('target');
+
+// 根據 'target' 參數的值來進行重定向
+if (target === 'facebook') {
+    window.location.href = 'http://www.facebook.com';
+} else if (target === 'google') {
+    window.location.href = 'http://www.google.com';
+} else {
+    // 如果 'target' 參數不存在或有其他值，則重定向到預設網址
+    window.location.href = 'http://www.facebook.com';
+}
